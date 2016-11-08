@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron|Oswald);
+body {
+  background-color: grey;
+}
+
+#pomedoro {
+  margin-top: 10%;
+}
+
+#setTimes,
+#playPomedoro {
+  color: white;
+  background-color: black;
+  max-width: 450px;
+}
+
+@media screen and (max-width: 450px) {
+  #setTimes,
+  #playPomedoro {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+}
+
+h1 #title {
+  font-family: Oswald;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+h2,
+h3 {
+  font-family: Oswald;
+  font-weight: bold;
+}
+
+#setTimes {
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.time {
+  font-family: Orbitron;
+  font-size: 1.5em;
+}
+
+#activity {
+  margin-top: -10px;
+}
+
+#testClock {
+  font-family: Orbitron;
+  font-size: 4em;
+}
+
+#playPomedoro {
+  padding-top: 5px;
+  margin-bottom: 20px;
+}
+
+#playPomedoro .fa:hover {
+  color: #BFAD7C;
+}
