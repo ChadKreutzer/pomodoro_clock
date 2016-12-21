@@ -91,7 +91,7 @@ $(document).ready(function() {
     }
   }
 
-  // Start pomedoro
+  // Start pomodoro
   function countdown() {
     if (id === true) {
       testPom = currentTime;
