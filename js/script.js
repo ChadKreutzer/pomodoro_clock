@@ -107,6 +107,7 @@ $(document).ready(function() {
         switch (onDeck) {
           case "Break":
             testPom = breakTime;
+            countPomodoro();
             onDeck = "Session";
             break;
           case "Session":
@@ -157,7 +158,9 @@ $(document).ready(function() {
     id = true;
     testPom = currentTime = workTime = minToSec(25);
     breakTime = minToSec(5);
+    pomCount = 0;
 
+    $("#pomCount").text(pomCount);
     $("#testPom").text(25);
     $("#testBreak").text(5);
     $("#testClock").text(secToTimeString(testPom));
@@ -166,4 +169,10 @@ $(document).ready(function() {
     onDeck = "Break";
   }
 
+  // Count pomodoro cycles in current session
+  var pomCount = 0;
+  function countPomodoro() {
+    pomCount++;
+    $("#pomCount").text(pomCount);
+  }
 });
