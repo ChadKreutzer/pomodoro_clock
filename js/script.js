@@ -1,6 +1,6 @@
 $(document).ready(function() {
   //global variables
-  var snd = new Audio("https://www.dropbox.com/s/p3wconux2o8hdbn/Air%20Horn-SoundBible.com-1561808001.wav?dl=1");
+  var snd = new Audio("https://drive.google.com/uc?export=download&id=0BwK2-ErwGS08dWZfQXhYWlRhVUk");
   var breakTime = 300;
   var workTime = 1500,
     currentTime = workTime,
