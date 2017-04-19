@@ -56,6 +56,27 @@ $(document).ready(function() {
       breakTime = eval(minToSec($("#testBreak").text()));
     }
   });
+  // Reduce Max pomodoros
+  $("#decMax").click(function() {
+    // Cannot reduce below 1
+    var current = $("#pomCount").text();
+    var max = $("#maxCount").text();
+    if (max == 0 || max == current) {
+      $("#maxCount").text(current);
+      $("#maxCount").css({'color':'#333'});
+    } else {
+      max--;
+      $("#maxCount").text(max);
+      $("#maxCount").css({'color':'#fff'});
+    }
+  });
+  // Increase Max pomodoros
+  $("#incMax").click(function() {
+    var max = $("#maxCount").text();
+    max++;
+    $("#maxCount").text(max);
+    $("#maxCount").css({'color':'#fff'});
+  });
 
   // Click handlers for controlling flow of session
   $("#start").click(countdown);
@@ -161,6 +182,7 @@ $(document).ready(function() {
     pomCount = 0;
 
     $("#pomCount").text(pomCount);
+    $("#maxCount").text(0);
     $("#testPom").text(25);
     $("#testBreak").text(5);
     $("#testClock").text(secToTimeString(testPom));
@@ -174,5 +196,18 @@ $(document).ready(function() {
   function countPomodoro() {
     pomCount++;
     $("#pomCount").text(pomCount);
+    maxCount();
+  }
+
+  // Maximum pomodoro sessions before stop
+  function maxCount() {
+    current = $("#pomCount").text();
+    count = $("#maxCount").text();
+    if (current == count) {
+      stopCountdown();
+    } else if (current-1 == count) {
+      $("#maxCount").text(current);
+      $("#maxCount").css({'color':'#333'});
+    }
   }
 });

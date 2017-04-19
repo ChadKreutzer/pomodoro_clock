@@ -36,12 +36,14 @@ h3 {
   font-weight: bold;
 }
 
-#setTimes {
+#setTimes,
+#footer {
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
 
-.time {
+.time,
+#pomCount {
   font-family: Orbitron;
   font-size: 1.5em;
 }
@@ -55,6 +57,8 @@ h3 {
   font-size: 4em;
 }
 
+#maxCount { color: #333; }
+
 #playPomodoro {
   padding-top: 5px;
   margin-bottom: 15px;
@@ -62,13 +66,4 @@ h3 {
 
 #playPomodoro .fa:hover {
   color: #BFAD7C;
-}
-
-#footer {
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-#pomCount {
-  font-family: Orbitron;
 }
