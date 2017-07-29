@@ -1,6 +1,6 @@
 $(document).ready(function() {
   //global variables
-  var snd = new Audio("https://www.dropbox.com/s/p3wconux2o8hdbn/Air%20Horn-SoundBible.com-1561808001.wav?dl=1");
+  var snd = new Audio("https://drive.google.com/uc?export=download&id=0BwK2-ErwGS08dWZfQXhYWlRhVUk");
   var breakTime = 300;
   var workTime = 1500,
     currentTime = workTime,
@@ -56,6 +56,27 @@ $(document).ready(function() {
       breakTime = eval(minToSec($("#testBreak").text()));
     }
   });
+  // Reduce Max pomodoros
+  $("#decMax").click(function() {
+    // Cannot reduce below 1
+    var current = $("#pomCount").text();
+    var max = $("#maxCount").text();
+    if (max == 0 || max == current) {
+      $("#maxCount").text(current);
+      $("#maxCount").css({'color':'#333'});
+    } else {
+      max--;
+      $("#maxCount").text(max);
+      $("#maxCount").css({'color':'#fff'});
+    }
+  });
+  // Increase Max pomodoros
+  $("#incMax").click(function() {
+    var max = $("#maxCount").text();
+    max++;
+    $("#maxCount").text(max);
+    $("#maxCount").css({'color':'#fff'});
+  });
 
   // Click handlers for controlling flow of session
   $("#start").click(countdown);
@@ -107,6 +128,7 @@ $(document).ready(function() {
         switch (onDeck) {
           case "Break":
             testPom = breakTime;
+            countPomodoro();
             onDeck = "Session";
             break;
           case "Session":
@@ -157,7 +179,10 @@ $(document).ready(function() {
     id = true;
     testPom = currentTime = workTime = minToSec(25);
     breakTime = minToSec(5);
+    pomCount = 0;
 
+    $("#pomCount").text(pomCount);
+    $("#maxCount").text(0);
     $("#testPom").text(25);
     $("#testBreak").text(5);
     $("#testClock").text(secToTimeString(testPom));
@@ -166,4 +191,23 @@ $(document).ready(function() {
     onDeck = "Break";
   }
 
+  // Count pomodoro cycles in current session
+  var pomCount = 0;
+  function countPomodoro() {
+    pomCount++;
+    $("#pomCount").text(pomCount);
+    maxCount();
+  }
+
+  // Maximum pomodoro sessions before stop
+  function maxCount() {
+    current = $("#pomCount").text();
+    count = $("#maxCount").text();
+    if (current == count) {
+      stopCountdown();
+    } else if (current-1 == count) {
+      $("#maxCount").text(current);
+      $("#maxCount").css({'color':'#333'});
+    }
+  }
 });

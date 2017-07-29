@@ -8,7 +8,8 @@ body {
 }
 
 #setTimes,
-#playPomodoro {
+#playPomodoro,
+#footer {
   color: white;
   background-color: black;
   max-width: 450px;
@@ -16,7 +17,8 @@ body {
 
 @media screen and (max-width: 450px) {
   #setTimes,
-  #playPomodoro {
+  #playPomodoro,
+  #footer {
     margin-left: -30px;
     margin-right: -30px;
   }
@@ -34,12 +36,14 @@ h3 {
   font-weight: bold;
 }
 
-#setTimes {
+#setTimes,
+#footer {
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
 
-.time {
+.time,
+#pomCount {
   font-family: Orbitron;
   font-size: 1.5em;
 }
@@ -53,9 +57,11 @@ h3 {
   font-size: 4em;
 }
 
+#maxCount { color: #333; }
+
 #playPomodoro {
   padding-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 #playPomodoro .fa:hover {
