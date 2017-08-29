@@ -2,106 +2,105 @@
 <html>
 
 <head>
-  <title>Pomodoro Clock</title>
+    <title>Pomodoro Clock</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
-  <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div id="pomodoro" class="container">
-      <h1 class="text-center"><span id="title">Pomodoro Clock</span></h1>
-      <div id="setTimes" class="container">
-        <div class="row">
-          <div class="col-xs-6 text-center">
-            <h3>Session</h3>
-          </div>
-          <div class="col-xs-6 text-center">
-            <h3>Break</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div id="decPom" class="col-xs-2 btn block-center minus">
-            <i class="fa fa-chevron-down fa-1x"></i>
-          </div>
-          <div id="session" class="col-xs-2 block-center text-center time">
-            <span id="testPom">25</span>
-          </div>
-          <div id="incPom" class="col-xs-2 btn block-center plus">
-            <i class="fa fa-chevron-up fa-1x"></i>
-          </div>
-          <div id="decBreak" class="col-xs-2 btn block-center minus">
-            <i class="fa fa-chevron-down fa-1x"></i>
-          </div>
-          <div id="break" class="col-xs-2 block-center text-center time">
-            <span id="testBreak">5</span>
-          </div>
-          <div id="incBreak" class="col-xs-2 btn block-center plus">
-            <i class="fa fa-chevron-up fa-1x"></i>
-          </div>
-        </div>
-      </div>
-      <div id="playPomodoro" class="container">
-        <div class="row">
-          <div class="col-xs-6">
-            <div id="start" class="btn btn-block" data-toggle="tooltip" title="Start clock"><i class="fa fa-play fa-3x"></i></div>
-          </div>
-          <div class="col-xs-6">
-            <div id="reset" class="btn btn-block" data-toggle="tooltip" title="Stop Clock and Reset"><i class="fa fa-refresh fa-3x"></i></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <h2 id="activity">Session</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div id="testClock" class="col-xs-12 text-center"></div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6">
-            <div id="pause" class="btn btn-block" data-toggle="tooltip" title="Pause clock"><i class="fa fa-pause fa-3x"></i></div>
-          </div>
-          <div class="col-xs-6">
-            <div id="stop" class="btn btn-block" data-toggle="tooltip" title="Stop clock"><i class="fa fa-stop fa-3x"></i></div>
-          </div>
+    <div class="container-fluid">
+        <div id="pomodoro" class="container">
+            <h1 class="text-center"><span id="title">Pomodoro Clock</span></h1>
+            <div id="setTimes" class="container">
+                <div class="row">
+                    <div class="col-xs-6 text-center">
+                        <h3>Session</h3>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <h3>Break</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="decPom" class="col-xs-2 btn block-center minus">
+                        <i class="fa fa-chevron-down fa-1x"></i>
+                    </div>
+                    <div id="session" class="col-xs-2 block-center text-center time">
+                        <span id="testPom">25</span>
+                    </div>
+                    <div id="incPom" class="col-xs-2 btn block-center plus">
+                        <i class="fa fa-chevron-up fa-1x"></i>
+                    </div>
+                    <div id="decBreak" class="col-xs-2 btn block-center minus">
+                        <i class="fa fa-chevron-down fa-1x"></i>
+                    </div>
+                    <div id="break" class="col-xs-2 block-center text-center time">
+                        <span id="testBreak">5</span>
+                    </div>
+                    <div id="incBreak" class="col-xs-2 btn block-center plus">
+                        <i class="fa fa-chevron-up fa-1x"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="playPomodoro" class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div id="start" class="btn btn-block" data-toggle="tooltip" title="Start clock"><i class="fa fa-play fa-3x"></i></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div id="reset" class="btn btn-block" data-toggle="tooltip" title="Stop Clock and Reset"><i class="fa fa-refresh fa-3x"></i></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <h2 id="activity">Session</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="testClock" class="col-xs-12 text-center"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div id="pause" class="btn btn-block" data-toggle="tooltip" title="Pause clock"><i class="fa fa-pause fa-3x"></i></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div id="stop" class="btn btn-block" data-toggle="tooltip" title="Stop clock"><i class="fa fa-stop fa-3x"></i></div>
+                    </div>
 
+                </div>
+            </div>
+            <div id="footer" class="container">
+                <div class="row">
+                    <div class="col-xs-6 text-center">
+                        <h3 data-toggle="tooltip" title="Completed Sessions">Completed</h3>
+                    </div>
+                    <div class="col-xs-6 text-center">
+                        <h3 data-toggle="tooltip" title="Max Sessions">Max</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 text-center">
+                        <span id="pomCount">0</span>
+                    </div>
+                    <div id="decMax" class="col-xs-2 btn block-center minus">
+                        <i class="fa fa-chevron-down fa-1x"></i>
+                    </div>
+                    <div id="max" class="col-xs-2 block-center text-center time">
+                        <span id="maxCount">0</span>
+                    </div>
+                    <div id="incMax" class="col-xs-2 btn block-center plus">
+                        <i class="fa fa-chevron-up fa-1x"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div id="footer" class="container">
-        <div class="row">
-          <div class="col-xs-6 text-center">
-            <h3 data-toggle="tooltip" title="Completed Sessions">Completed</h3>
-          </div>
-          <div class="col-xs-6 text-center">
-            <h3 data-toggle="tooltip" title="Max Sessions">Max</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 text-center">
-            <span id="pomCount">0</span>
-          </div>
-          <div id="decMax" class="col-xs-2 btn block-center minus">
-            <i class="fa fa-chevron-down fa-1x"></i>
-          </div>
-          <div id="max" class="col-xs-2 block-center text-center time">
-            <span id="maxCount">0</span>
-          </div>
-          <div id="incMax" class="col-xs-2 btn block-center plus">
-            <i class="fa fa-chevron-up fa-1x"></i>
-        </div>
-      </div>
     </div>
-  </div>
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-  <script src="js/script.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
